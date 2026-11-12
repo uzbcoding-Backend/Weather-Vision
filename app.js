@@ -1,1 +1,2 @@
+const city=document.getElementById('city');const title=document.getElementById('title');const forecast=document.getElementById('forecast');
 const samples={Tashkent:[24,22,25,23],London:[13,12,14,11],Tokyo:[19,21,20,18],'New York':[16,17,15,14]};function render(){title.textContent=city.value+' · sample temperatures';forecast.replaceChildren();samples[city.value].forEach((t,i)=>{let d=document.createElement('div');d.className='tile';d.textContent='Day '+(i+1)+' · '+t+'°C';forecast.append(d)})}city.onchange=render;render();
